@@ -1,0 +1,19 @@
+<div class="col-md-6 col-md-offset-3">
+  <h1>Shopping list</h1>
+</div>
+<%= render "form", item: Item.new %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <ul>
+        <li>Artikel -- winkel -- hoeveelheid</li>
+        <% @items.each do |item| %>
+        <li> <%="#{item.name} --#{item.shop} --#{item.quantity}" %></li>
+        <% end %>
+
+      </ul>
+
+    </div>
+  </div>
+</div>
